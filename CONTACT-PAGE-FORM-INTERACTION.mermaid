@@ -1,0 +1,11 @@
+flowchart TD
+
+Contact[Contact Page /contato] --> Form[User fills Contact Form]
+Form --> Validate{Client-side validation}
+Validate -->|Valid| Submit[Submit]
+Validate -->|Invalid| Errors[Inline errors + guidance]
+
+Submit --> Feedback{Server response}
+Feedback -->|Success| SuccessUI[Success message]
+Feedback -->|Email failure but stored| SoftSuccess[Success message + internal logging]
+Feedback -->|Hard failure| Retry[Retry guidance / alternative contact]
