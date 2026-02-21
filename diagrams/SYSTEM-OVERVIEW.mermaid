@@ -1,7 +1,0 @@
-flowchart LR
-U[User Browser] --> FE[Frontend (SPA): React 18 + TypeScript, Vite, Tailwind, shadcn/ui]
-FE -->|HTTP fetch (credentials: include)| BE[Backend API: Express.js + TypeScript]
-BE --> S[Storage Layer: IStorage, MemStorage]
-BE --> E[Email Integration: Nodemailer (SMTP), SendGrid]
-FE --> A[Static Assets: Images, Fonts, CSS]
-FE --> M[Embedded Google Maps: iframe loading=lazy]

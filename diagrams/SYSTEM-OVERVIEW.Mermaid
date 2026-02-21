@@ -1,0 +1,11 @@
+flowchart LR
+
+U[User Browser] --> FE[Frontend (SPA)\nReact 18 + TypeScript\nVite + Tailwind + shadcn/ui]
+
+FE -->|HTTP fetch\ncredentials: include| BE[Backend API\nExpress.js + TypeScript]
+
+BE --> S[Storage Layer\nIStorage abstraction\nMemStorage (current)]
+BE --> E[Email Integration\nNodemailer (SMTP)\nSendGrid (provider)]
+
+FE --> A[Static Assets\nImages / Fonts / CSS]
+FE --> M[Embedded Google Maps\niframe loading=lazy]
